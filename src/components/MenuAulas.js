@@ -75,7 +75,8 @@ const MenuAulas = () => {
   // Filtered data based on search term and selected materia
   const filteredAulas = aulas.filter((aula) => {
     const matchesSearch = aula.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesMateria = selectedMateria === '' || aula.materia === selectedMateria;
+    const matchesMateria = selectedMateria === '' || 
+    aula.materias.some(materia => materia.materia === selectedMateria);
     return matchesSearch && matchesMateria;
   });
 
