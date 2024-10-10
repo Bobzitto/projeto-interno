@@ -44,7 +44,7 @@ const EditAula = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (name.trim() === '' || etapas.trim() === '' || selectedMateria.trim() ==='') {
+    if (name?.toString().trim() === '' || etapas?.toString().trim() === '' || selectedMateria?.toString().trim() === '') {
       Swal.fire({
         icon: "error",
         text: "Preencha todos os campos!",
