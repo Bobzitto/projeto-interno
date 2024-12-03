@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import aulasData from '../assets/aulasData'; // Adjust the import path as needed
+import aulasData from '../assets/aulasData'; 
 import Swal from 'sweetalert2';
 
 const EditEtapa = () => {
@@ -150,7 +150,7 @@ const EditEtapa = () => {
                 <option value="dissertative">Dissertativo</option>
               </select>
             </div>
-            {/* Add form fields to edit the exercises here */}
+            {/* Campos dos exercicios entrariam aqui */}
           </>
         )}
         <div className="text-center">

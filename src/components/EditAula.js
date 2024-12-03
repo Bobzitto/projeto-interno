@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import aulasData from '../assets/aulasData'; // Adjust the import path as needed
-import Etapa from './Etapa'; // Import the Etapa component
+import aulasData from '../assets/aulasData'; 
+import Etapa from './Etapa'; 
 
 const schoolYears = {
   "Ensino Fundamental I": ["1º ano", "2º ano", "3º ano", "4º ano", "5º ano"],

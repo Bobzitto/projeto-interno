@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
-import aulasData from "../assets/aulasData"; // Import the mock data
+import aulasData from "../assets/aulasData"; 
 import Swal from "sweetalert2";
 
 const MenuAulas = () => {
   const { isMenuOpen } = useOutletContext();
-  const [aulas, setAulas] = useState([]); // Set initial state to an empty array
+  const [aulas, setAulas] = useState([]); 
   const [sortField, setSortField] = useState("name");
   const [sortOrder, setSortOrder] = useState("asc");
   const [searchTerm, setSearchTerm] = useState("");
@@ -33,19 +33,16 @@ const MenuAulas = () => {
             'A aula foi deletada.',
             'success'
           );
-          // Optionally, you can force a re-render or navigate to another page
           navigate('/home/aulas');
         }
       }
     });
   };
 
-  // Load aulasData into state when the component mounts
   useEffect(() => {
-    setAulas(aulasData); // Set the aulas state with the imported data
+    setAulas(aulasData);
   }, []);
 
-  // Filtered and sorted data
   const filteredAulas = aulas
     .filter((aula) =>
       aula.name.toLowerCase().includes(searchTerm.toLowerCase())

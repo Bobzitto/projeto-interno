@@ -21,7 +21,7 @@ const AppRoutes = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Login setIsAuthenticated={setIsAuthenticated} />, // Pass setIsAuthenticated to Login
+      element: <Login setIsAuthenticated={setIsAuthenticated} />, 
     },
     {
       path: "/home",
