@@ -3,6 +3,7 @@
 Este projeto é uma aplicação React que demonstra a funcionalidade mostrada no protótipo em Figma. Para acessar a página principal, utilize os seguintes dados:
 
 Login: admin@example.com
+
 Senha: admin
 
 Apesar de ter outros componentes, os únicos componentes funcionais nesse repositório são aqueles relacionados ao protótipo: O menu lateral acessado pelo icone no canto esquerdo, o menu de aulas, e a possibilidade de criar, deletar e editar aulas. 
