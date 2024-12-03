@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import aulasData from '../assets/aulasData'; 
-import Etapa from './Etapa'; 
+import aulasData from '../assets/aulasData'; // Adjust the import path as needed
+import Etapa from './Etapa'; // Import the Etapa component
 
 const schoolYears = {
   "Ensino Fundamental I": ["1º ano", "2º ano", "3º ano", "4º ano", "5º ano"],
@@ -206,19 +206,22 @@ const EditAula = () => {
         {/* Distância */}
         <div>
           <label className="block text-gray-700 mb-2">Distância</label>
-          <input
-            type="text"
+          <select
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             value={distance}
             onChange={(e) => setDistance(e.target.value)}
-            placeholder="Digite a modalidade (Presencial/Online)"
-          />
+          >
+            <option value="" disabled>Selecione a distância</option>
+            <option value="Curta">Curta</option>
+            <option value="Média">Média</option>
+            <option value="Longa">Longa</option>
+          </select>
         </div>
 
         {/* Render Etapas */}
         <div className="space-y-2">
           {Array.from({ length: steps }, (_, i) => (
-            <Etapa key={i + 1} number={i + 1} />
+            <Etapa key={i + 1} number={i + 1} aulaId={aula?.id} />
           ))}
         </div>
 

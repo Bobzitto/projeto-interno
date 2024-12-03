@@ -1,12 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ReactComponent as DownArrowIcon } from '../assets/down-arrow.svg'; // Adjust the import path as needed
 
-const Etapa = ({ number }) => {
+const Etapa = ({ number, aulaId }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/edit-etapa/${number}`);
+    navigate(`/home/aulas/${aulaId}/etapas/${number}/edit`);
   };
 
   return (

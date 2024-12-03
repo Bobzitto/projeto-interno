@@ -12,6 +12,7 @@ import EditAula from "./EditAula";
 import EditTurma from "./EditTurma";
 import Eventos from "./Eventos";
 import GraphQL from "./GraphQL";
+import EditEtapa from "./EditEtapa";
 
 const AppRoutes = () => {
   // State to simulate authentication
@@ -58,6 +59,10 @@ const AppRoutes = () => {
         {
           path: "aulas/:id/edit",
           element: isAuthenticated ? <EditAula /> : <Navigate to="/" />,
+        },
+        {
+          path: "aulas/:aulaId/etapas/:etapaId/edit",
+          element: isAuthenticated ? <EditEtapa /> : <Navigate to="/" />,
         },
         {
           path: "turmas/0/edit",
