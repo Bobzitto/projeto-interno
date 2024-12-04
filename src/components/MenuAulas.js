@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
-import aulasData from "../assets/aulasData"; 
+import aulasData from "../assets/aulasData";
 import Swal from "sweetalert2";
 
 const MenuAulas = () => {
   const { isMenuOpen } = useOutletContext();
-  const [aulas, setAulas] = useState([]); 
+  const [aulas, setAulas] = useState([]);
   const [sortField, setSortField] = useState("name");
   const [sortOrder, setSortOrder] = useState("asc");
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,25 +15,21 @@ const MenuAulas = () => {
 
   const handleDelete = (id) => {
     Swal.fire({
-      title: 'Tem certeza?',
+      title: "Tem certeza?",
       text: "Você não poderá reverter isso!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Sim, deletar!',
-      cancelButtonText: 'Cancelar'
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Sim, deletar!",
+      cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        const index = aulasData.findIndex(aula => aula.id === id);
+        const index = aulasData.findIndex((aula) => aula.id === id);
         if (index !== -1) {
           aulasData.splice(index, 1);
-          Swal.fire(
-            'Deletado!',
-            'A aula foi deletada.',
-            'success'
-          );
-          navigate('/home/aulas');
+          Swal.fire("Deletado!", "A aula foi deletada.", "success");
+          navigate("/home/aulas");
         }
       }
     });
@@ -129,8 +125,7 @@ const MenuAulas = () => {
               onClick={() => sortAulas("schoolYear")}
             >
               Ano Escolar{" "}
-              {sortField === "schoolYear" &&
-                (sortOrder === "asc" ? "↑" : "↓")}
+              {sortField === "schoolYear" && (sortOrder === "asc" ? "↑" : "↓")}
             </th>
             <th
               className="py-2 px-4 border cursor-pointer"
@@ -144,8 +139,7 @@ const MenuAulas = () => {
               onClick={() => sortAulas("subject")}
             >
               Matéria{" "}
-              {sortField === "subject" &&
-                (sortOrder === "asc" ? "↑" : "↓")}
+              {sortField === "subject" && (sortOrder === "asc" ? "↑" : "↓")}
             </th>
             <th className="py-2 px-4 border">Ações</th>
           </tr>
@@ -170,11 +164,11 @@ const MenuAulas = () => {
                     Editar
                   </button>
                   <button
-              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
-              onClick={() => handleDelete(aula.id)}
-            >
-              Deletar
-            </button>
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => handleDelete(aula.id)}
+                  >
+                    Deletar
+                  </button>
                 </td>
               </tr>
             ))
