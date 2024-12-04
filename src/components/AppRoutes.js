@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
-import App from "../App"; // Main App component
-import Login from "./Login"; // Login component
-import Home from "./Home"; // Home component
-import ErrorPage from "./ErrorPage"; // Error page component
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+import App from "../App"; 
+import Login from "./Login"; 
+import ErrorPage from "./ErrorPage"; 
 import MenuAulas from "./MenuAulas";
 import Aula from "./Aula";
-import MenuTurmas from "./MenuTurmas";
-import Turma from "./Turma";
 import EditAula from "./EditAula";
-import EditTurma from "./EditTurma";
-import Eventos from "./Eventos";
-import GraphQL from "./GraphQL";
 import EditEtapa from "./EditEtapa";
 
 const AppRoutes = () => {
@@ -21,7 +19,7 @@ const AppRoutes = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Login setIsAuthenticated={setIsAuthenticated} />, 
+      element: <Login setIsAuthenticated={setIsAuthenticated} />,
     },
     {
       path: "/home",
@@ -38,7 +36,7 @@ const AppRoutes = () => {
         },
         {
           path: "turmas",
-          element: isAuthenticated ? <MenuTurmas /> : <Navigate to="/" />,
+          element: isAuthenticated ? <ErrorPage /> : <Navigate to="/" />,
         },
         {
           path: "aulas/:id/",
@@ -46,11 +44,11 @@ const AppRoutes = () => {
         },
         {
           path: "eventos",
-          element: isAuthenticated ? <Eventos /> : <Navigate to="/" />,
+          element: isAuthenticated ? <ErrorPage /> : <Navigate to="/" />,
         },
         {
           path: "turmas/:id",
-          element: isAuthenticated ? <Turma /> : <Navigate to="/" />,
+          element: isAuthenticated ? <ErrorPage /> : <Navigate to="/" />,
         },
         {
           path: "aulas/0/edit",
@@ -66,15 +64,19 @@ const AppRoutes = () => {
         },
         {
           path: "turmas/0/edit",
-          element: isAuthenticated ? <EditTurma /> : <Navigate to="/" />,
+          element: isAuthenticated ? <ErrorPage /> : <Navigate to="/" />,
         },
         {
           path: "turma/:id/edit",
-          element: isAuthenticated ? <EditTurma /> : <Navigate to="/" />,
+          element: isAuthenticated ? <ErrorPage /> : <Navigate to="/" />,
         },
         {
           path: "graphql",
-          element: <GraphQL />,
+          element: <ErrorPage />,
+        },
+        {
+          path: "suporte",
+          element: <ErrorPage />,
         },
       ],
     },
