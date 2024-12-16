@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/projeto-interno/static/css/main.5d2b6f91.css",
+    "main.js": "/projeto-interno/static/js/main.019a8ee0.js",
+    "static/media/suporte.svg": "/projeto-interno/static/media/suporte.4422efa082ae1d2b4573b415811714e0.svg",
+    "static/media/eventos.svg": "/projeto-interno/static/media/eventos.275a89a02f41432570c52ccb2cc0b573.svg",
+    "index.html": "/projeto-interno/index.html",
+    "static/media/messages.svg": "/projeto-interno/static/media/messages.3e0bfb897f4f778f7d34210c206220f2.svg",
+    "static/media/friends.svg": "/projeto-interno/static/media/friends.df9b9b9c06a8f2a77775af83176b06de.svg",
+    "static/media/notifications.svg": "/projeto-interno/static/media/notifications.d343089f0c65c9303bd10dff8420a294.svg",
+    "static/media/burger.svg": "/projeto-interno/static/media/burger.5108261e17620fb4f3e27d4801dff868.svg",
+    "static/media/sair.svg": "/projeto-interno/static/media/sair.a39f9d0ec0a0e554bd044404a2024211.svg",
+    "static/media/aulas.svg": "/projeto-interno/static/media/aulas.6aa5723c804f4711f57c199dc9e585c9.svg",
+    "static/media/turmas.svg": "/projeto-interno/static/media/turmas.6c5ac2ca6399e2b6eb9967f9bf8b0cbf.svg",
+    "static/media/graphql.svg": "/projeto-interno/static/media/graphql.5b014336a23d78baa31fb34df4f80fe7.svg",
+    "static/media/down-arrow.svg": "/projeto-interno/static/media/down-arrow.782b849e4e3b43dcc1d2a025c1bf1f93.svg",
+    "main.5d2b6f91.css.map": "/projeto-interno/static/css/main.5d2b6f91.css.map",
+    "main.019a8ee0.js.map": "/projeto-interno/static/js/main.019a8ee0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d2b6f91.css",
+    "static/js/main.019a8ee0.js"
+  ]
+}
