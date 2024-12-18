@@ -83,7 +83,7 @@ const MenuAulas = () => {
     >
       {/* Header */}
       <div className="py-0 flex justify-center items-center space-x-2 mt-8">
-        <img src="/arrow.png" className="h-24" alt="Arrow" />
+        <img src={`${process.env.PUBLIC_URL}/arrow.png`} className="h-24" alt="Arrow" />
         <h2 className="text-center text-3xl font-semibold">Minhas Aulas</h2>
         <img
           src="/arrow.png"
