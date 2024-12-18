@@ -20,7 +20,7 @@ const Topbar = ({ toggleMenu }) => {
         <button className="p-2 focus:outline-none" onClick={toggleMenu}>
           <BurgerIcon />
         </button>
-        <img src="/odisseia_novo.png" alt="Odisseia Logo" className="h-8" />
+        <img src={`${process.env.PUBLIC_URL}/odisseia_novo.png`} alt="Odisseia Logo" className="h-8" />
       </div>
       <div className="text-gray-600"></div>
       <div className="flex items-center space-x-12 relative ml-auto mr-8">
