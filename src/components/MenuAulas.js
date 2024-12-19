@@ -86,7 +86,7 @@ const MenuAulas = () => {
         <img src={`${process.env.PUBLIC_URL}/arrow.png`} className="h-24" alt="Arrow" />
         <h2 className="text-center text-3xl font-semibold">Minhas Aulas</h2>
         <img
-          src="/arrow.png"
+          src={`${process.env.PUBLIC_URL}/arrow.png`}
           className="h-24 transform scale-x-[-1]"
           alt="Arrow"
         />
